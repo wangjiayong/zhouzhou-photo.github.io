@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link type="text/css"  href="./css/3.css" rel="stylesheet ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<title>Lily莉莉</title>
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+    <style>
+  *{
+    padding:0;
+    margin:0;
+}
+body{
+    width:100%;
+    height:100%;
+    background:linear-gradient(darkred 0%,black 100%);
+}
+#react{
+    width: 200px;
+    height:400px;
+    margin: 200px auto;
+    transform-style:preserve-3d;
+    animation:rotate 20s infinite;
+    animation-timing-function: linear;
+}
+#react div{
+    position:absolute;
+    transition: all .4s;
+}
+div .out_pic{
+    width:200px;
+    height:400px;
+    /* height: 100%; */
+    opacity:0.9;
+}
+div .in_pic{
+    width:100px;
+    height:100px;
+    /* height: 100%; */
+}
+#react span{
+    display:block;
+    position:absolute;
+    width:100px;
+    height:100px;
+    top:50px;
+    left:50px;
+}
+@keyframes rotate{
+    from{transform: rotateX(0deg) rotateY(0deg);}
+    to{transform: rotateX(360deg) rotateY(360deg);}
+}
+  
+  
+.out_front{
+    transform:translateZ(100px);
+}
+.out_back{
+    transform:translateZ(-100px);
+}
+.out_left{
+    transform:rotateY(90deg) translateZ(100px);
+}
+.out_right{
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.out_top{
+
+    transform:rotateX(90deg) translateZ(100px);
+}
+.out_bottom{
+
+    transform: rotateX(-90deg) translateZ(300px);
+}
+.in_front{
+    transform:translateZ(50px);
+}
+.in_back{
+    transform:translateZ(-50px);
+}
+.in_left{
+    transform:rotateY(90deg) translateZ(50px);
+}
+.in_right{
+    transform: rotateY(-90deg) translateZ(50px);
+}
+.in_top{
+    transform:rotateX(90deg) translateZ(50px);
+}
+.in_bottom{
+    transform: rotateX(-90deg) translateZ(50px);
+}
+  
+/*外面的图片散开*/
+/*  */
+  
+/* @charset "utf-8"; */
+/* CSS Document */
+    </style>
+</head>
+<body>
+<div id="react">
+    <div class="out_front">
+        <img src="./img/lily.png" class="out_pic">
+    </div>
+    <div class="out_back">
+        <img src="./img/lily.png" class="out_pic">
+    </div>
+    <div class="out_left">
+        <img src="./img/lily.png" class="out_pic">
+    </div>
+    <div class="out_right">
+        <img src="./img/lily.png" class="out_pic">
+    </div>
+    <div class="out_top">
+        <img src="./img/lily2.png" class="out_pic" style="height: 200px;">
+    </div>
+    <div class="out_bottom">
+        <img src="./img/lily2.png" class="out_pic" style="height: 200px;">
+    </div>
+    <span class="in_front">
+        <img src="./img/lily2.png" class="in_pic">
+    </span>
+    <span class="in_back">
+        <img src="./img/lily2.png" class="in_pic">
+    </span>
+    <span class="in_left">
+        <img src="./img/lily2.png" class="in_pic">
+    </span>
+    <span class="in_right">
+        <img src="./img/lily2.png" class="in_pic">
+    </span>
+    <span class="in_top">
+        <img src="./img/lily2.png" class="in_pic">
+    </span>
+    <span class="in_bottom">
+        <img src="./img/lily2.png" class="in_pic">
+    </span>
+</div>
+<script>
+  document.querySelector('#react').addEventListener('click',function(){
+    document.querySelector('.out_front').style.transform='translateZ(200px)'
+    document.querySelector('.out_back').style.transform='translateZ(-200px)'
+    document.querySelector('.out_left').style.transform='rotateY(90deg) translateZ(200px)'
+    document.querySelector('.out_right').style.transform='rotateY(-90deg) translateZ(200px)'
+    document.querySelector('.out_top').style.transform='rotateX(90deg) translateZ(200px)'
+    document.querySelector('.out_bottom').style.transform='rotateX(-90deg) translateZ(200px)'
+  })
+</script>
+</body>
+</html>
